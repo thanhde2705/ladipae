@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẹo Nhớ Huyệt - Phương pháp ghi nhớ huyệt đạo đột phá</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2a9d8f 0%, #1d3557 100%);
+        }
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .cta-button {
+            background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+        }
+        .secondary-button {
+            background-color: #2a9d8f;
+            color: white;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .secondary-button:hover {
+            background-color: #218579;
+            transform: translateY(-2px);
+        }
+        .price-tag {
+            background-color: #e63946;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .discount-badge {
+            background-color: #ffb703;
+            color: #333;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .form-input {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 12px 15px;
+            width: 100%;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .form-input:focus {
+            border-color: #2a9d8f;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+        }
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+        .highlight-text {
+            color: #e63946;
+            font-weight: 700;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #2a9d8f;
+        }
+        .feature-icon {
+            color: #2a9d8f;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .countdown-box {
+            background-color: #1d3557;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 3px;
+            min-width: 40px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .book-cover {
+            border: 8px solid white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: rotate(-3deg);
+            transition: all 0.5s ease;
+        }
+        .book-cover:hover {
+            transform: rotate(0deg) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        #success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .guarantee-badge {
+            background-color: #f8f8f8;
+            border: 2px solid #2a9d8f;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .huyet-diagram {
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .mnemonic-technique {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .mnemonic-technique:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .urgency-banner {
+            background: linear-gradient(90deg, #2a9d8f 0%, #264653 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow-md w-full py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="h-10 w-10 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+                <span class="ml-2 text-xl font-bold text-gray-800">Y Học Cổ Truyền Việt Nam</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#book-summary" class="text-gray-600 hover:text-teal-600 transition-colors">Tổng Quan</a>
+                <a href="#features" class="text-gray-600 hover:text-teal-600 transition-colors">Tính Năng</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-teal-600 transition-colors">Đánh Giá</a>
+                <a href="#order-form" class="text-gray-600 hover:text-teal-600 transition-colors">Đặt Hàng</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-10 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                    <span class="block">Khám Phá Bí Quyết</span>
+                    <span class="block text-yellow-300">Ghi Nhớ Huyệt Đạo</span>
+                    <span class="block">Chỉ Trong 7 Ngày</span>
+                </h1>
+                <p class="text-xl text-white opacity-90 mb-8">
+                    Tiếp cận <span class="font-bold text-yellow-300">phương pháp đột phá</span> giúp ghi nhớ vị trí và tác dụng của hơn 100 huyệt đạo mà không cần học thuộc lòng vất vả.
+                </p>
+                <a href="#order-form" class="cta-button inline-block text-xl">
+                    Nhận Cuốn Sách Ngay Hôm Nay
+                </a>
+                <p class="text-white text-sm mt-4 opacity-80">
+                    <i class="fas fa-truck"></i> Miễn phí vận chuyển toàn quốc
+                </p>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://m.media-amazon.com/images/I/917dEZOv40L._AC_UF1000,1000_QL80_.jpg" alt="Sách Mẹo Nhớ Huyệt" class="book-cover mx-auto relative z-10 max-w-sm w-full">
+                <div class="absolute top-5 right-5 md:right-10 z-20 transform rotate-12">
+                    <div class="bg-yellow-500 text-gray-900 py-2 px-4 rounded-lg font-bold text-lg">
+                        Giảm 25%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Banner -->
+    <div class="container mx-auto px-4 -mt-6 relative z-20">
+        <div class="urgency-banner flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-bold mb-2">Ưu Đãi Có Hạn - Chỉ Còn Lại</h3>
+                <p class="opacity-90">Nhận ngay bản in màu cao cấp + Bản PDF miễn phí</p>
+            </div>
+            <div class="flex items-center mt-4 md:mt-0">
+                <div class="flex items-center">
+                    <div class="countdown-box">02</div>
+                    <span class="text-sm mx-1">:</span>
+                    <div class="countdown-box">18</div>
+                    <span class="text-sm mx-1">:</span>
+                    <div class="countdown-box">45</div>
+                </div>
+                <span class="ml-3 text-sm">Ngày : Giờ : Phút</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Summary Section -->
+    <section id="book-summary" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Tổng Quan Cuốn Sách</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://treeboss.vn/wp-content/uploads/2021/09/huyet-dao-tren-co-the-06-1-1-1.jpg" alt="Sơ đồ huyệt đạo" class="huyet-diagram max-w-full h-auto mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Thách Thức Khi Học Huyệt Đạo</h3>
+                    <p class="text-gray-700 mb-6">
+                        Học thuộc vị trí và tác dụng của hơn 100 huyệt đạo là một thách thức lớn đối với nhiều người học y học cổ truyền, châm cứu, và bấm huyệt. <span class="highlight-text">Nhiều người mất hàng năm trời</span> để có thể nhớ chính xác cách sử dụng các huyệt đạo.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Giải Pháp Đột Phá</h3>
+                    <p class="text-gray-700 mb-4">
+                        <span class="font-bold">"Mẹo Nhớ Huyệt"</span> giới thiệu phương pháp ghi nhớ đột phá, áp dụng kỹ thuật liên tưởng và mnemonic hiện đại, giúp bạn nhớ nhanh và lâu các huyệt đạo quan trọng cùng công dụng của chúng.
+                    </p>
+                    <p class="text-gray-700">
+                        Thay vì học thuộc máy móc, cuốn sách hướng dẫn cách tạo <span class="highlight-text">các liên kết trực quan</span> giữa vị trí huyệt, tên gọi, và tác dụng, giúp quá trình ghi nhớ trở nên tự nhiên và thú vị.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="benefit-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Học Nhanh Gấp 5 Lần</h3>
+                    <p class="text-gray-700">
+                        Phương pháp ghi nhớ đột phá giúp rút ngắn thời gian học từ nhiều tháng xuống chỉ còn vài tuần.
+                    </p>
+                </div>
+                <div class="benefit-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Hiểu Sâu, Nhớ Lâu</h3>
+                    <p class="text-gray-700">
+                        Không chỉ nhớ máy móc mà còn hiểu bản chất, mối liên hệ giữa các huyệt đạo trong hệ thống kinh lạc.
+                    </p>
+                </div>
+                <div class="benefit-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Ứng Dụng Thực Tiễn</h3>
+                    <p class="text-gray-700">
+                        Sẵn sàng áp dụng kiến thức vào thực hành bấm huyệt, châm cứu và tự chăm sóc sức khỏe hàng ngày.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Nội Dung Đặc Biệt Trong Sách</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="flex flex-col mnemonic-technique">
+                    <img src="https://media.post.rvohealth.io/wp-content/uploads/sites/4/2022/03/266878-Memory-and-Mnemonic-Devices-Artboard-4-864x1024.png" alt="Kỹ thuật ghi nhớ" class="h-52 object-cover w-full">
+                    <div class="p-6 bg-white flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Hệ Thống Kỹ Thuật Ghi Nhớ Độc Quyền</h3>
+                        <p class="text-gray-700">
+                            Phương pháp liên tưởng hình ảnh kết hợp với câu chuyện giúp bạn nhớ vị trí, tên gọi và tác dụng của hơn 100 huyệt đạo một cách tự nhiên.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col mnemonic-technique">
+                    <img src="https://treeboss.vn/wp-content/uploads/2021/09/huyet-dao-tren-co-the-04-1-1.jpg" alt="Sơ đồ huyệt đạo chi tiết" class="h-52 object-cover w-full">
+                    <div class="p-6 bg-white flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Sơ Đồ Huyệt Đạo Màu Rõ Nét</h3>
+                        <p class="text-gray-700">
+                            Hơn 50 hình ảnh minh họa chất lượng cao, giúp bạn dễ dàng định vị chính xác vị trí huyệt đạo trên cơ thể.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col mnemonic-technique">
+                    <img src="https://cdn.nhathuoclongchau.com.vn/unsafe/800x0/filters:quality(95)/https://cms-prod.s3-sgn09.fptcloud.com/cac_huyet_dao_tren_co_the_bam_dung_huyet_chua_bach_benh1_daeb576b19.jpg" alt="Hướng dẫn thực hành" class="h-52 object-cover w-full">
+                    <div class="p-6 bg-white flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Hướng Dẫn Thực Hành Bấm Huyệt</h3>
+                        <p class="text-gray-700">
+                            Chỉ dẫn chi tiết cách xác định và bấm đúng các huyệt đạo để điều trị các vấn đề sức khỏe thông thường.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col mnemonic-technique">
+                    <img src="https://thepeakperformancecenter.com/wp-content/uploads/2017/05/mnemonic-Devices.jpg" alt="Bài tập thực hành" class="h-52 object-cover w-full">
+                    <div class="p-6 bg-white flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Bài Tập Thực Hành & Kiểm Tra</h3>
+                        <p class="text-gray-700">
+                            Hệ thống bài tập giúp củng cố kiến thức và kiểm tra mức độ tiến bộ của bạn sau mỗi chương.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 text-center">
+                    <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 border-4 border-teal-500">
+                        <svg class="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">TS. Nguyễn Văn Minh</h3>
+                    <p class="text-teal-600 font-medium">Chuyên gia Y học Cổ truyền & Kỹ thuật Ghi nhớ</p>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Về Tác Giả</h2>
+                    <p class="text-gray-700 mb-4">
+                        TS. Nguyễn Văn Minh là chuyên gia hàng đầu trong lĩnh vực Y học cổ truyền Việt Nam với hơn 25 năm kinh nghiệm nghiên cứu và giảng dạy. Ông tốt nghiệp Đại học Y Hà Nội và nhận bằng Tiến sĩ Y học tại Đại học Y khoa Thượng Hải, Trung Quốc.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Với niềm đam mê trong việc ứng dụng kỹ thuật ghi nhớ vào y học, TS. Minh đã kết hợp kiến thức chuyên môn sâu rộng về huyệt đạo với các phương pháp ghi nhớ hiện đại để tạo ra phương pháp học huyệt đạo đột phá.
+                    </p>
+                    <p class="text-gray-700">
+                        Cuốn sách "Mẹo Nhớ Huyệt" là kết quả của hơn 10 năm nghiên cứu và thử nghiệm, đã giúp hàng nghìn sinh viên y khoa và người học châm cứu ghi nhớ huyệt đạo nhanh chóng và hiệu quả.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-50 relative" id="pricing">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Đầu Tư Cho Kiến Thức Y Học</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 mt-12">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-1 max-w-md border-2 border-gray-200 transition-all hover:border-teal-500 hover:shadow-xl">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-xl font-bold text-gray-800">Sách In Cao Cấp</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center items-center mb-6">
+                            <div class="text-gray-400 line-through text-xl mr-3">449.000đ</div>
+                            <div class="text-3xl font-bold text-gray-800">349.000đ</div>
+                        </div>
+                        <div class="discount-badge mb-6 mx-auto">Tiết kiệm 100.000đ</div>
+                        
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Sách bìa cứng, in màu chất lượng cao</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Hơn 200 trang với 50+ hình ảnh minh họa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Tặng kèm bản PDF miễn phí</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Tặng kèm poster huyệt đạo bỏ túi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Miễn phí vận chuyển toàn quốc</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#order-form" class="cta-button block text-center">Đặt Mua Ngay</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-1 max-w-md border-2 border-gray-200 transition-all hover:border-teal-500 hover:shadow-xl">
+                    <div class="bg-gray-100 py-4 text-center">
+                        <h3 class="text-xl font-bold text-gray-800">Combo Tiết Kiệm</h3>
+                        <div class="bg-yellow-500 text-gray-900 py-1 px-4 rounded-full font-bold text-sm inline-block mt-2">
+                            Ưu Đãi Tốt Nhất
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center items-center mb-6">
+                            <div class="text-gray-400 line-through text-xl mr-3">799.000đ</div>
+                            <div class="text-3xl font-bold text-gray-800">549.000đ</div>
+                        </div>
+                        <div class="discount-badge mb-6 mx-auto">Tiết kiệm 250.000đ</div>
+                        
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><span class="font-bold">2 cuốn</span> sách bìa cứng in màu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Hơn 200 trang với 50+ hình ảnh minh họa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Tặng kèm bản PDF miễn phí</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Tặng kèm <span class="font-bold">2 poster</span> huyệt đạo bỏ túi</span>
+                            </li>
+                            <li class="flex items-start text-teal-700 font-semibold">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Tặng thêm Sổ tay huyệt đạo bỏ túi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Miễn phí vận chuyển toàn quốc</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#order-form" class="cta-button block text-center">Đặt Mua Ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 guarantee-badge max-w-3xl mx-auto text-center">
+                <div class="flex justify-center mb-4">
+                    <svg class="h-12 w-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Cam Kết Hoàn Tiền 100% Trong 30 Ngày</h3>
+                <p class="text-gray-700">
+                    Nếu bạn không hài lòng với cuốn sách vì bất kỳ lý do gì, chỉ cần gửi lại cuốn sách trong tình trạng còn tốt, chúng tôi sẽ hoàn lại 100% số tiền bạn đã thanh toán.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Nhận Xét Từ Độc Giả</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="testimonial-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Tôi là sinh viên năm thứ 2 ngành Y học cổ truyền. Trước đây phải mất hàng tuần để học thuộc vị trí huyệt đạo, nhưng với cuốn sách này, chỉ sau 5 ngày tôi đã nhớ được hơn 70 huyệt cùng tác dụng của chúng. Phương pháp liên tưởng hình ảnh thật sự hiệu quả!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold mr-4">
+                            NT
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Nguyễn Thảo</h4>
+                            <p class="text-sm text-gray-600">Sinh viên Y khoa, Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Là một y sĩ đã hành nghề 15 năm, tôi vẫn gặp khó khăn trong việc nhớ chính xác vị trí của một số huyệt ít dùng. Cuốn sách này đã giúp tôi hệ thống hóa kiến thức và nhớ lâu hơn, từ đó tự tin hơn trong điều trị bệnh nhân. Đáng đồng tiền bát gạo!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold mr-4">
+                            TL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Trần Lâm</h4>
+                            <p class="text-sm text-gray-600">Y sĩ y học cổ truyền, TP.HCM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Tôi là người tự học châm cứu để chữa bệnh cho gia đình. Bản đồ huyệt đạo và các mẹo nhớ trong sách giúp tôi dễ dàng xác định đúng vị trí huyệt, điều mà trước đây tôi luôn cảm thấy không chắc chắn. Sách rất dễ hiểu ngay cả với người không chuyên."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold mr-4">
+                            PH
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Phạm Hương</h4>
+                            <p class="text-sm text-gray-600">Người tự học châm cứu, Đà Nẵng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Đặt Mua Sách Ngay Hôm Nay</h2>
+            
+            <div class="max-w-3xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8">
+                <form id="bookOrderForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="fullName" class="form-label">Họ và Tên <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullName" name="fullName" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="form-label">Số Điện Thoại <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="address" class="form-label">Địa Chỉ Nhận Hàng <span class="text-red-500">*</span></label>
+                        <textarea id="address" name="address" rows="3" class="form-input" required></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="form-label">Email (Tùy chọn)</label>
+                            <input type="email" id="email" name="email" class="form-input">
+                        </div>
+                        <div>
+                            <label for="quantity" class="form-label">Số Lượng <span class="text-red-500">*</span></label>
+                            <select id="quantity" name="quantity" class="form-input" required>
+                                <option value="1">1 cuốn - 349.000đ</option>
+                                <option value="2">2 cuốn - 549.000đ (Tiết kiệm 149.000đ)</option>
+                                <option value="3">3 cuốn - 747.000đ (Tiết kiệm 300.000đ)</option>
+                                <option value="5">5 cuốn - 1.195.000đ (Tiết kiệm 550.000đ)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="notes" class="form-label">Ghi Chú Thêm (Tùy chọn)</label>
+                        <textarea id="notes" name="notes" rows="2" class="form-input"></textarea>
+                    </div>
+                    
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Phương Thức Thanh Toán</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <input type="radio" id="cod" name="paymentMethod" value="cod" class="h-4 w-4 text-teal-600" checked>
+                                <label for="cod" class="ml-2 text-gray-700">Thanh toán khi nhận hàng (COD)</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer" class="h-4 w-4 text-teal-600">
+                                <label for="bankTransfer" class="ml-2 text-gray-700">Chuyển khoản ngân hàng</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-button w-full text-xl py-4">
+                        XÁC NHẬN ĐẶT HÀNG
+                    </button>
+                </form>
+                
+                <div id="success-message" class="mt-6">
+                    <h3 class="text-xl font-bold mb-2">Đặt Hàng Thành Công!</h3>
+                    <p>Cảm ơn bạn đã đặt mua sách "Mẹo Nhớ Huyệt". Chúng tôi sẽ liên hệ xác nhận đơn hàng trong vòng 24 giờ tới.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center section-title">Các Câu Hỏi Thường Gặp</h2>
+            
+            <div class="max-w-3xl mx-auto mt-12 space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Cuốn sách phù hợp với đối tượng nào?</h3>
+                    <p class="text-gray-700">
+                        Sách phù hợp với nhiều đối tượng, từ sinh viên y khoa, người học châm cứu, bấm huyệt chuyên nghiệp đến những người quan tâm đến y học cổ truyền và muốn tự chăm sóc sức khỏe bản thân và gia đình.
+                    </p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Liệu người không có nền tảng y học có thể hiểu được không?</h3>
+                    <p class="text-gray-700">
+                        Hoàn toàn có thể! Cuốn sách được viết với ngôn ngữ dễ hiểu, tránh sử dụng quá nhiều thuật ngữ chuyên môn khó. Các mẹo và phương pháp ghi nhớ được thiết kế để bất kỳ ai cũng có thể áp dụng ngay.
+                    </p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Thời gian giao hàng mất bao lâu?</h3>
+                    <p class="text-gray-700">
+                        Thời gian giao hàng thông thường từ 2-5 ngày làm việc tùy theo khu vực. Đối với các thành phố lớn như Hà Nội, TP.HCM, Đà Nẵng, thời gian giao hàng có thể chỉ từ 1-2 ngày.
+                    </p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Làm thế nào để nhận bản PDF khi mua sách?</h3>
+                    <p class="text-gray-700">
+                        Sau khi đặt hàng, chúng tôi sẽ liên hệ với bạn qua email hoặc số điện thoại để gửi link tải bản PDF. Bạn có thể truy cập ngay lập tức mà không cần đợi sách giấy được giao.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Nếu tôi không hài lòng với cuốn sách, tôi có thể trả lại không?</h3>
+                    <p class="text-gray-700">
+                        Chúng tôi cam kết hoàn tiền 100% trong vòng 30 ngày nếu bạn không hài lòng với cuốn sách. Bạn chỉ cần gửi lại sách trong tình trạng còn tốt kèm theo hóa đơn mua hàng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Y Học Cổ Truyền Việt Nam</h3>
+                    <p class="max-w-xs opacity-80">
+                        Cung cấp kiến thức y học cổ truyền đáng tin cậy, dễ hiểu và áp dụng thực tiễn.
+                    </p>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Liên Hệ</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>20 Nguyễn Văn Trỗi, Q. Phú Nhuận, TP.HCM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>0908 123 456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb2b5bdb49ba2b3b4b8b8b4afa9aea2beb5adb5f5b8b4b6">[email&#160;protected]</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Theo Dõi</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center opacity-70 text-sm">
+                <p>&copy; 2023 Y Học Cổ Truyền Việt Nam. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle form submission
+            const form = document.getElementById('bookOrderForm');
+            const successMessage = document.getElementById('success-message');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = {
+                    hoTen: document.getElementById('fullName').value,
+                    soDienThoai: document.getElementById('phone').value,
+                    diaChi: document.getElementById('address').value,
+                    email: document.getElementById('email').value || '',
+                    soLuong: document.getElementById('quantity').value,
+                    ghiChu: document.getElementById('notes').value || '',
+                    phuongThucThanhToan: document.querySelector('input[name="paymentMethod"]:checked').value
+                };
+                
+                // Google Apps Script Web App URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwp80JkGabivJPtNyq35e8rkeEGA-ZlSimRwBaheyTZMD4phzWK-w9hdJjV0Z8gvEkFHg/exec';
+                
+                // Send data to Google Sheet
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Có lỗi xảy ra khi gửi đơn hàng. Vui lòng thử lại sau!');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
